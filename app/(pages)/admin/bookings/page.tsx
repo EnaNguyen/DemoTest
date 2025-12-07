@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -29,7 +30,8 @@ const statusColors: Record<string, string> = {
 };
 
 export default function AdminBookingsPage() {
-  const { fetchWithAuth } = useAuth();
+  const router = useRouter();
+  const { user, isAuthenticated, fetchWithAuth } = useAuth();
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [statusFilter, setStatusFilter] = useState<string>("ALL");
@@ -37,6 +39,13 @@ export default function AdminBookingsPage() {
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   const [isUpdating, setIsUpdating] = useState<string | null>(null);
   const [confirmPaymentId, setConfirmPaymentId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!isAuthenticated || user?.role !== "admin") {
+      router.push("/admin/authAdmin");
+      return;
+    }
+  }, [isAuthenticated, user, router]);
 
   useEffect(() => {
     const fetchBookings = async () => {

@@ -1,4 +1,7 @@
 "use client";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/app/contexts/AuthContext";
+import { useEffect } from "react";
 import { UserSheet } from "@/components/sheets/UserSheet";
 import { useUsers } from "@/app/contexts/UserContext";
 import { useState } from "react";
@@ -7,8 +10,16 @@ import { Plus } from "lucide-react";
 import { EditUserModal } from "@/components/modals/EditUserModal";
 
 export default function AdminUsers() {
+  const router = useRouter();
+  const { user, isAuthenticated } = useAuth();
   const { users, updateUser, addUser } = useUsers();
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isAuthenticated || user?.role !== "admin") {
+      router.push("/admin/authAdmin");
+    }
+  }, [isAuthenticated, user, router]);
 
   const handleEditSave = async (userId: string, data: { fullName: string; email: string; phone: string; username: string; password: string; confirmPassword: string; role: "admin" | "provider" | "client"; gender: string; age: number; birthday: string; twoFactorEnabled: boolean; address?: string }) => {
     try {

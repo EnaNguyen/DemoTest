@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import {
   LayoutDashboard,
@@ -28,7 +28,13 @@ const navItems = [
 
 function SidebarContent({ onClose }: { onClose?: () => void }) {
   const pathname = usePathname();
+  const router = useRouter();
   const { logout } = useAuth();
+
+  const handleLogout = () => {
+    logout();
+    router.push("/admin/authAdmin");
+  };
 
   return (
     <div className="flex flex-col h-full">
@@ -67,7 +73,7 @@ function SidebarContent({ onClose }: { onClose?: () => void }) {
         <Button
           variant="ghost"
           className="w-full justify-start text-destructive hover:text-destructive hover:bg-destructive/10"
-          onClick={logout}
+          onClick={handleLogout}
         >
           <LogOut className="mr-3 h-5 w-5" />
           Đăng xuất

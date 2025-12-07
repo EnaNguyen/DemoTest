@@ -1,5 +1,8 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import { useEffect, useState, useMemo } from "react";
+import { useAuth } from "@/app/contexts/AuthContext";
 import { HotelCard } from "@/components/cards/HotelCard";
 import { HotelDetailModal } from "@/components/modals/HotelDetailModal";
 import { BookedHotelDetailModal } from "@/components/modals/BookedHotelDetailModal";
@@ -8,8 +11,6 @@ import { useBookings } from "@/app/contexts/BookingContext";
 import { useUsers } from "@/app/contexts/UserContext";
 import { Button } from "@/components/ui/button";
 import { Info } from "lucide-react";
-import { useState, useMemo } from "react";
-import { useAuth } from "@/app/contexts/AuthContext";
 import { Hotel } from "@/app/types";
 import { HotelFilters } from "@/components/filters/HotelFilters";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -26,12 +27,20 @@ import {
 const HOTELS_PER_PAGE = 6;
 
 export default function AdminHotels() {
+  const router = useRouter();
+  const { user, isAuthenticated } = useAuth();
   const [selectedDetailHotel, setSelectedDetailHotel] = useState<Hotel | null>(null);
   const [selectedBookedHotel, setSelectedBookedHotel] = useState<Hotel | null>(null);
   const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
   const [isBookedDetailModalOpen, setIsBookedDetailModalOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [currentBookedPage, setCurrentBookedPage] = useState(1);
+
+  useEffect(() => {
+    if (!isAuthenticated || user?.role !== "admin") {
+      router.push("/admin/authAdmin");
+    }
+  }, [isAuthenticated, user, router]);
 
   const { getFilteredHotels, updateHotel } = useHotels();
   const { bookings } = useBookings();
