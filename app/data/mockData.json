@@ -1,0 +1,532 @@
+{
+  "mockUsers": [
+    {
+      "_id": "admin_001",
+      "fullName": "Admin User",
+      "gender": "Nam",
+      "age": 35,
+      "birthday": "1990-01-01",
+      "idCard": "099999999999",
+      "email": "admin@gmail.com",
+      "phone": "0999999999",
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin",
+      "twoFactorEnabled": false,
+      "status": "active",
+      "createdAt": "2023-01-01T00:00:00Z",
+      "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJ0eXBlIjoicmVmcmVzaCIsImlhdCI6MTc2NTA5MjYxNiwiZXhwIjoxNzY1Njk3NDE2fQ.OzZTUtDGMn_gs5xSA-rTsBgM8xOwsf2nvc_kq6I7kYw"
+    },
+    {
+      "_id": "owner_001",
+      "fullName": "Nguyễn Văn An",
+      "gender": "Nam",
+      "age": 45,
+      "birthday": "1980-05-15",
+      "idCard": "012345678901",
+      "email": "an.nguyen@hotelowner.vn",
+      "phone": "0909123456",
+      "username": "owner_an",
+      "password": "owner123",
+      "role": "provider",
+      "businessLicense": "BL2021000456",
+      "address": "123 Lê Lợi, Quận 1, TP.HCM",
+      "businessType": "Khách sạn & Resort",
+      "taxCode": "0312345678",
+      "twoFactorEnabled": true,
+      "status": "active",
+      "createdAt": "2023-01-10T10:00:00Z",
+      "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJvd25lcl8wMDEiLCJ0eXBlIjoicmVmcmVzaCIsImlhdCI6MTc2NTA5MjU0OSwiZXhwIjoxNzY1Njk3MzQ5fQ.ih9aqs4uBmos3owcrDLMT4JZeGND90xYlV31d8l6b30"
+    },
+    {
+      "_id": "owner_002",
+      "fullName": "Trần Thị Lan",
+      "gender": "Nữ",
+      "age": 38,
+      "birthday": "1987-11-20",
+      "idCard": "098765432112",
+      "email": "lantran@homestay.vn",
+      "phone": "0918234567",
+      "username": "owner_lan",
+      "password": "owner123",
+      "role": "provider",
+      "businessLicense": "BL2022000789",
+      "address": "45 Nguyễn Huệ, Nha Trang, Khánh Hòa",
+      "businessType": "Homestay & Motel",
+      "taxCode": "0319876543",
+      "twoFactorEnabled": false,
+      "status": "active",
+      "createdAt": "2023-03-15T08:30:00Z"
+    },
+    {
+      "_id": "cust_001",
+      "fullName": "Lê Hoàng Minh",
+      "gender": "Nam",
+      "age": 29,
+      "birthday": "1996-08-10",
+      "idCard": "025678912345",
+      "email": "minh.le@gmail.com",
+      "phone": "0935123456",
+      "username": "minhle96",
+      "password": "client123",
+      "role": "client",
+      "twoFactorEnabled": true,
+      "status": "active",
+      "createdAt": "2024-02-20T14:20:00Z"
+    },
+    {
+      "_id": "cust_002",
+      "fullName": "Phạm Ngọc Ánh",
+      "gender": "Nữ",
+      "age": 26,
+      "birthday": "1999-03-25",
+      "idCard": "027891234567",
+      "email": "anhpham99@yahoo.com",
+      "phone": "0978234567",
+      "username": "ngocanh99",
+      "password": "client123",
+      "role": "client",
+      "twoFactorEnabled": false,
+      "status": "active",
+      "createdAt": "2024-05-10T09:15:00Z"
+    },
+    {
+      "_id": "user_1765014147035",
+      "fullName": "Nguyen Quang Quy1",
+      "email": "nguyenquangquyX@gmail.com",
+      "phone": "0973713274",
+      "username": "Enanguyen",
+      "password": "123456",
+      "role": "client",
+      "gender": "male",
+      "age": 18,
+      "birthday": "1999-12-08",
+      "idCard": "000000000000",
+      "twoFactorEnabled": false,
+      "status": "active",
+      "createdAt": "2025-12-06T09:42:27.035Z",
+      "address": "528 Nguyen Duy Trinh"
+    }
+  ],
+  "mockHotels": [
+    {
+      "_id": "hotel_001",
+      "ownerId": "owner_001",
+      "name": "Sunrise Resort & Spa Phú Quốc",
+      "slug": "sunrise-resort-spa-phu-quoc",
+      "address": "Bãi Dài, Gành Dầu, Phú Quốc, Kiên Giang",
+      "description": "Resort 5 sao ven biển với bãi biển riêng và hồ bơi vô cực. Nằm trên bãi biển Bãi Dài tuyệt đẹp, resort mang đến trải nghiệm nghỉ dưỡng sang trọng với dịch vụ đẳng cấp quốc tế.",
+      "businessTypes": [
+        "resort"
+      ],
+      "starRating": 5,
+      "totalRooms": 150,
+      "amenities": [
+        "wifi",
+        "pool",
+        "spa",
+        "restaurant",
+        "parking",
+        "beachfront"
+      ],
+      "checkInTime": "14:00",
+      "checkOutTime": "12:00",
+      "status": "APPROVED",
+      "images": [
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800",
+        "/images/hotels/1765011901410_Screenshot_20251123_233150_YouTube.jpg"
+      ],
+      "createdAt": "2023-06-01T00:00:00Z"
+    },
+    {
+      "_id": "hotel_002",
+      "ownerId": "owner_002",
+      "name": "Nha Trang Motel & Homestay",
+      "slug": "nha-trang-motel-homestay",
+      "address": "12 Trần Phú, Nha Trang, Khánh Hòa",
+      "description": "Motel và homestay giá rẻ gần trung tâm và bãi biển. Vị trí thuận lợi, phù hợp cho du khách muốn khám phá Nha Trang với ngân sách hợp lý.",
+      "businessTypes": [
+        "motel"
+      ],
+      "starRating": 2,
+      "totalRooms": 25,
+      "amenities": [
+        "wifi",
+        "parking",
+        "air_conditioning"
+      ],
+      "checkInTime": "13:00",
+      "checkOutTime": "11:00",
+      "status": "APPROVED",
+      "images": [
+        "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800"
+      ],
+      "createdAt": "2023-08-15T00:00:00Z"
+    },
+    {
+      "_id": "hotel_003",
+      "ownerId": "owner_001",
+      "name": "Downtown Luxury Hotel Saigon",
+      "slug": "downtown-luxury-hotel-saigon",
+      "address": "88 Đồng Khởi, Quận 1, TP.HCM",
+      "description": "Khách sạn 5 sao sang trọng ngay trung tâm Sài Gòn. View toàn cảnh thành phố, tiện nghi hiện đại và dịch vụ hoàn hảo.",
+      "businessTypes": [
+        "hotel"
+      ],
+      "starRating": 5,
+      "totalRooms": 200,
+      "amenities": [
+        "wifi",
+        "pool",
+        "gym",
+        "spa",
+        "restaurant",
+        "bar",
+        "parking"
+      ],
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "status": "APPROVED",
+      "images": [
+        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
+        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800"
+      ],
+      "createdAt": "2025-10-01T00:00:00Z"
+    },
+    {
+      "_id": "hotel_004",
+      "ownerId": "owner_002",
+      "name": "Cozy Dalat Homestay",
+      "slug": "cozy-dalat-homestay",
+      "address": "15 Phù Đổng Thiên Vương, Đà Lạt, Lâm Đồng",
+      "description": "Homestay ấm cúng giữa lòng Đà Lạt. Không gian yên tĩnh, thân thiện, phù hợp cho gia đình và nhóm bạn.",
+      "businessTypes": [
+        "homestay"
+      ],
+      "starRating": 3,
+      "totalRooms": 10,
+      "amenities": [
+        "wifi",
+        "parking",
+        "garden",
+        "fireplace"
+      ],
+      "checkInTime": "14:00",
+      "checkOutTime": "11:00",
+      "status": "DRAFT",
+      "images": [
+        "https://images.unsplash.com/photo-1587381420270-3e1a5b9e6904?w=800"
+      ],
+      "createdAt": "2025-11-15T00:00:00Z"
+    },
+    {
+      "_id": "hotel_1765072770655",
+      "name": "dqwdq",
+      "address": "dqwdq",
+      "description": "dqwdqw",
+      "starRating": 3,
+      "totalRooms": 10,
+      "checkInTime": "14:00",
+      "checkOutTime": "12:00",
+      "amenities": [
+        "aaa"
+      ],
+      "ownerId": "owner_001",
+      "status": "SUBMITTED",
+      "createdAt": "2025-12-07T01:59:30.655Z",
+      "images": [
+        "/images/hotels/1765076021791_FB_IMG_1764240474377.jpg",
+        "/images/hotels/1765076021794_Screenshot_20251123_233150_YouTube.jpg"
+      ]
+    },
+    {
+      "_id": "hotel_1765072943505",
+      "name": "rf2r1",
+      "address": "r12r1",
+      "description": "r1r12",
+      "starRating": 3,
+      "totalRooms": 10,
+      "checkInTime": "14:00",
+      "checkOutTime": "12:00",
+      "amenities": [
+        "r1r1",
+        "312312"
+      ],
+      "ownerId": "owner_001",
+      "status": "SUBMITTED",
+      "createdAt": "2025-12-07T02:02:23.505Z",
+      "images": [
+        "/images/hotels/1765076021791_FB_IMG_1764240474377.jpg",
+        "/images/hotels/1765076021794_Screenshot_20251123_233150_YouTube.jpg"
+      ]
+    },
+    {
+      "_id": "hotel_1765092581268",
+      "name": "dqwdq",
+      "address": "dqwdqw",
+      "description": "dqwdqwd",
+      "starRating": 3,
+      "totalRooms": 10,
+      "checkInTime": "14:00",
+      "checkOutTime": "12:00",
+      "amenities": [],
+      "images": [
+        "/images/hotels/1765092572096_579441052_1903457714384263_7089854670650942076_n.png",
+        "/images/hotels/1765092572124_fasdad.png"
+      ],
+      "ownerId": "owner_001",
+      "status": "SUBMITTED",
+      "createdAt": "2025-12-07T07:29:41.268Z"
+    }
+  ],
+  "mockRoomTypes": [
+    {
+      "_id": "rt_001",
+      "hotelId": "hotel_001",
+      "name": "Deluxe Ocean View",
+      "slug": "deluxe-ocean-view",
+      "capacity": 2,
+      "bedType": "1 King Bed",
+      "size": 45,
+      "description": "Phòng nhìn ra biển, ban công riêng với view tuyệt đẹp",
+      "amenities": [
+        "wifi",
+        "minibar",
+        "safe",
+        "bathtub",
+        "balcony"
+      ],
+      "basePrice": 3500000,
+      "images": [
+        "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
+      ]
+    },
+    {
+      "_id": "rt_002",
+      "hotelId": "hotel_001",
+      "name": "Standard Double",
+      "slug": "standard-double",
+      "capacity": 2,
+      "bedType": "2 Single Beds",
+      "size": 28,
+      "description": "Phòng tiêu chuẩn thoải mái",
+      "amenities": [
+        "wifi",
+        "air_conditioning",
+        "tv"
+      ],
+      "basePrice": 1800000,
+      "images": [
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800"
+      ]
+    },
+    {
+      "_id": "rt_003",
+      "hotelId": "hotel_002",
+      "name": "Phòng Đôi Tiêu Chuẩn",
+      "capacity": 2,
+      "bedType": "1 Double Bed",
+      "size": 20,
+      "description": "Phòng đôi giá rẻ, sạch sẽ",
+      "amenities": [
+        "wifi",
+        "air_conditioning",
+        "fan"
+      ],
+      "basePrice": 450000,
+      "images": [
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
+      ]
+    },
+    {
+      "_id": "rt_004",
+      "hotelId": "hotel_003",
+      "name": "Executive Suite",
+      "slug": "executive-suite",
+      "capacity": 3,
+      "bedType": "1 King Bed + Sofa Bed",
+      "size": 65,
+      "description": "Suite cao cấp với phòng khách riêng và view thành phố",
+      "amenities": [
+        "wifi",
+        "minibar",
+        "safe",
+        "bathtub",
+        "city_view",
+        "living_room"
+      ],
+      "basePrice": 5500000,
+      "images": [
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800"
+      ]
+    },
+    {
+      "_id": "rt_005",
+      "hotelId": "hotel_004",
+      "name": "Family Room",
+      "capacity": 4,
+      "bedType": "1 Queen Bed + 2 Single Beds",
+      "size": 35,
+      "description": "Phòng gia đình rộng rãi, ấm cúng",
+      "amenities": [
+        "wifi",
+        "heater",
+        "garden_view"
+      ],
+      "basePrice": 850000,
+      "images": [
+        "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800"
+      ]
+    }
+  ],
+  "mockRooms": [
+    {
+      "_id": "room_101",
+      "hotelId": "hotel_001",
+      "roomTypeId": "rt_001",
+      "roomNumber": "101",
+      "floor": 1,
+      "status": "available"
+    },
+    {
+      "_id": "room_102",
+      "hotelId": "hotel_001",
+      "roomTypeId": "rt_001",
+      "roomNumber": "102",
+      "floor": 1,
+      "status": "available"
+    },
+    {
+      "_id": "room_201",
+      "hotelId": "hotel_001",
+      "roomTypeId": "rt_002",
+      "roomNumber": "201",
+      "floor": 2,
+      "status": "available"
+    },
+    {
+      "_id": "room_m01",
+      "hotelId": "hotel_002",
+      "roomTypeId": "rt_003",
+      "roomNumber": "01",
+      "floor": 1,
+      "status": "available"
+    }
+  ],
+  "mockBookings": [
+    {
+      "_id": "booking_001",
+      "customerId": "cust_001",
+      "hotelId": "hotel_001",
+      "roomIds": [
+        "room_101"
+      ],
+      "roomTypeId": "rt_001",
+      "checkIn": "2025-12-20",
+      "checkOut": "2025-12-25",
+      "adults": 2,
+      "children": 0,
+      "totalPrice": 17500000,
+      "status": "confirmed",
+      "paymentStatus": "paid",
+      "paymentMethod": "vnpay",
+      "specialRequests": "Cần thêm nôi em bé",
+      "createdAt": "2025-11-01T10:30:00Z"
+    },
+    {
+      "_id": "booking_002",
+      "customerId": "cust_002",
+      "hotelId": "hotel_002",
+      "roomIds": [
+        "room_m01"
+      ],
+      "roomTypeId": "rt_003",
+      "checkIn": "2025-12-01",
+      "checkOut": "2025-12-03",
+      "adults": 2,
+      "children": 0,
+      "totalPrice": 900000,
+      "status": "confirmed",
+      "paymentStatus": "pending",
+      "paymentMethod": "cash",
+      "createdAt": "2025-11-15T14:20:00Z"
+    },
+    {
+      "_id": "booking_1765090616413",
+      "customerId": "customer_anon",
+      "hotelId": "hotel_002",
+      "roomIds": [],
+      "roomTypeId": "rt_003",
+      "checkIn": "2025-12-07",
+      "checkOut": "2025-12-11",
+      "adults": 2,
+      "children": 6,
+      "totalPrice": 1800000,
+      "status": "confirmed",
+      "paymentStatus": "paid",
+      "paymentMethod": "cash",
+      "createdAt": "2025-12-07T06:56:56.431Z",
+      "updatedAt": "2025-12-07T06:56:56.431Z"
+    },
+    {
+      "_id": "booking_1765091653013",
+      "customerId": "customer_anon",
+      "hotelId": "hotel_003",
+      "roomIds": [],
+      "roomTypeId": "rt_004",
+      "checkIn": "2025-12-10",
+      "checkOut": "2026-01-01",
+      "adults": 2,
+      "children": 0,
+      "totalPrice": 121000000,
+      "status": "cancelled",
+      "paymentStatus": "pending",
+      "paymentMethod": "cash",
+      "createdAt": "2025-12-07T07:14:13.025Z",
+      "updatedAt": "2025-12-07T07:14:13.025Z"
+    },
+    {
+      "_id": "booking_1765092158204",
+      "customerId": "customer_anon",
+      "hotelId": "hotel_001",
+      "roomIds": [],
+      "roomTypeId": "rt_002",
+      "checkIn": "2025-12-07",
+      "checkOut": "2025-12-09",
+      "adults": 2,
+      "children": 1,
+      "totalPrice": 3600000,
+      "status": "pending",
+      "paymentStatus": "paid",
+      "paymentMethod": "vnpay",
+      "createdAt": "2025-12-07T07:22:38.215Z",
+      "updatedAt": "2025-12-07T07:22:38.215Z"
+    }
+  ],
+  "mockReviews": [
+    {
+      "_id": "review_001",
+      "hotelId": "hotel_001",
+      "customerId": "cust_001",
+      "bookingId": "booking_001",
+      "rating": 5,
+      "comment": "Resort tuyệt vời, nhân viên thân thiện, view đẹp!",
+      "images": [
+        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400"
+      ],
+      "createdAt": "2025-12-26T14:00:00Z"
+    }
+  ],
+  "mockPayments": [
+    {
+      "_id": "pay_001",
+      "bookingId": "booking_001",
+      "amount": 17500000,
+      "method": "vnpay",
+      "status": "paid",
+      "transactionId": "vnp_TxnRef_123456789",
+      "paidAt": "2025-11-01T10:35:00Z"
+    }
+  ]
+}
